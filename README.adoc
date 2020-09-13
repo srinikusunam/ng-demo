@@ -1567,13 +1567,11 @@ I hope you've enjoyed this in-depth tutorial on how to get started with Angular 
 
 To integrate http://developer.okta.com[Okta] for user authentication, you'll first need to https://developer.okta.com/signup/[register] and create an OpenID Connect application.
 
-You can also install the [Okta CLI](https://github.com/oktadeveloper/okta-cli) and run `okta register`.
-
 === Create an OpenID Connect App in Okta
 
 OpenID Connect is built on top of the OAuth 2.0 protocol. It allows clients to verify the identity of the user and, as well as to obtain their basic user information.
 
-Login to your Okta account, or use the Okta CLI and run `okta apps create`.
+Login to your Okta account, then follow the steps below.
 
 * Navigate to *Applications* > *Add Application*.
 * Select *Single-Page App (SPA)* and click *Next*.
