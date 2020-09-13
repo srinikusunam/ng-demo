@@ -24,3 +24,7 @@ jobs:
         run: xvfb-run npm test -- --watch=false
       - name: Run integration tests
         run: xvfb-run --server-args="-screen 0 1024x768x24" --auto-servernum npm run e2e
+        env:
+          E2E_USERNAME: ${{secrets.E2E_USERNAME}}
+          E2E_PASSWORD: ${{secrets.E2E_PASSWORD}}
+          E2E_NAME: ${{secrets.E2E_NAME}}
