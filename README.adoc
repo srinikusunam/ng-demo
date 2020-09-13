@@ -2,11 +2,7 @@
 
 :author: Matt Raible
 :email:  matt@raibledesigns.com
-<<<<<<< HEAD
-:revnumber: 9.0
-=======
 :revnumber: 10.0
->>>>>>> main
 :revdate: {docdate}
 :subject: Angular and Angular CLI
 :keywords: Angular, Angular CLI, TypeScript, JavaScript, Node, npm, Jasmine, Protractor
@@ -34,23 +30,11 @@ endif::[]
 :toc: macro
 
 This tutorial shows you how to build a bare-bones search and edit application using https://angular.io[Angular] and
-<<<<<<< HEAD
-https://github.com/angular/angular-cli[Angular CLI] version 9.0.
-
-toc::[]
-
-For older versions of Angular, please see previous tutorials:
-
-* https://github.com/mraible/ng-demo/blob/6a24488ca847dea215ad70101a22f3ebf67ba79a/README.adoc[Angular 7]
-* https://github.com/mraible/ng-demo/blob/41d9526dbc0a35131118f7f101938dfe75a0e212/README.adoc[Angular 6]
-* https://github.com/mraible/ng-demo/blob/662159470802c53f445db6393576c0926e31d642/README.adoc[Angular 5]
-=======
 https://github.com/angular/angular-cli[Angular CLI] version 10.1.
 
 toc::[]
 
 For older versions of Angular, please see previous tutorials: https://github.com/mraible/ng-demo/blob/bec5fdf3b3da0419b012971ab42870df03ce94ea/README.adoc[Angular 9], https://github.com/mraible/ng-demo/blob/6a24488ca847dea215ad70101a22f3ebf67ba79a/README.adoc[Angular 7], https://github.com/mraible/ng-demo/blob/41d9526dbc0a35131118f7f101938dfe75a0e212/README.adoc[Angular 6], and https://github.com/mraible/ng-demo/blob/662159470802c53f445db6393576c0926e31d642/README.adoc[Angular 5].
->>>>>>> main
 
 ifdef::env-github[]
 TIP: It appears you're reading this document on GitHub. If you want a prettier view, install https://chrome.google.com/webstore/detail/asciidoctorjs-live-previe/iaalpfgpbocpdfblpnhhgllgbdbchmia[Asciidoctor.js Live Preview for Chrome], then view the https://raw.githubusercontent.com/mraible/ng-demo/master/README.adoc[raw document]. Another option is to use the https://gist.asciidoctor.org/?github-mraible%2Fng-demo%2Fmain%2F%2FREADME.adoc[DocGist view].
@@ -70,16 +54,9 @@ You'll build a simple web application with Angular CLI, a tool for Angular devel
 == What you'll need
 
 * About 30 minutes.
-<<<<<<< HEAD
-* A favorite text editor or IDE. I recommend https://www.jetbrains.com/idea/[IntelliJ IDEA] and its
-https://plugins.jetbrains.com/plugin/8395?pr=idea[Angular TypeScript Live Templates plugin].
-* http://nodejs.org/[Node.js] and npm installed.
-* https://github.com/angular/angular-cli[Angular CLI] installed. If you don't have Angular CLI installed, install it using `npm install -g @angular/cli@9.0.2`.
-=======
 * A favorite text editor or IDE. I recommend https://www.jetbrains.com/idea/[IntelliJ IDEA].
 * http://nodejs.org/[Node.js] and npm installed.
 * https://github.com/angular/angular-cli[Angular CLI] installed. If you don't have Angular CLI installed, install it using `npm install -g @angular/cli@10.1.0`.
->>>>>>> main
 
 == Create your project
 
@@ -98,10 +75,7 @@ You can see the what version of Angular CLI you're using with `ng version`.
 
 ----
 $ ng version
-<<<<<<< HEAD
-=======
 
->>>>>>> main
      _                      _                 ____ _     ___
     / \   _ __   __ _ _   _| | __ _ _ __     / ___| |   |_ _|
    / △ \ | '_ \ / _` | | | | |/ _` | '__|   | |   | |    | |
@@ -110,13 +84,8 @@ $ ng version
                 |___/
 
 
-<<<<<<< HEAD
-Angular CLI: 9.0.2
-Node: 12.13.0
-=======
 Angular CLI: 10.1.0
 Node: 14.8.0
->>>>>>> main
 OS: darwin x64
 
 Angular:
@@ -125,21 +94,12 @@ Ivy Workspace:
 
 Package                      Version
 ------------------------------------------------------
-<<<<<<< HEAD
-@angular-devkit/architect    0.900.2
-@angular-devkit/core         9.0.2
-@angular-devkit/schematics   9.0.2
-@schematics/angular          9.0.2
-@schematics/update           0.900.2
-rxjs                         6.5.3
-=======
 @angular-devkit/architect    0.1001.0
 @angular-devkit/core         10.1.0
 @angular-devkit/schematics   10.1.0
 @schematics/angular          10.1.0
 @schematics/update           0.1001.0
 rxjs                         6.6.2
->>>>>>> main
 ----
 
 If you run this command from the `ng-demo` directory, you'll see even more information.
@@ -153,16 +113,6 @@ If you run this command from the `ng-demo` directory, you'll see even more infor
                 |___/
 
 
-<<<<<<< HEAD
-Angular CLI: 9.0.2
-Node: 12.13.0
-OS: darwin x64
-
-Angular: 9.0.1
-... animations, common, compiler, compiler-cli, core, forms
-... language-service, platform-browser, platform-browser-dynamic
-... router
-=======
 Angular CLI: 10.1.0
 Node: 14.8.0
 OS: darwin x64
@@ -170,26 +120,10 @@ OS: darwin x64
 Angular: 10.1.0
 ... animations, cli, common, compiler, compiler-cli, core, forms
 ... platform-browser, platform-browser-dynamic, router
->>>>>>> main
 Ivy Workspace: Yes
 
 Package                           Version
 -----------------------------------------------------------
-<<<<<<< HEAD
-@angular-devkit/architect         0.900.2
-@angular-devkit/build-angular     0.900.2
-@angular-devkit/build-optimizer   0.900.2
-@angular-devkit/build-webpack     0.900.2
-@angular-devkit/core              9.0.2
-@angular-devkit/schematics        9.0.2
-@angular/cli                      9.0.2
-@ngtools/webpack                  9.0.2
-@schematics/angular               9.0.2
-@schematics/update                0.900.2
-rxjs                              6.5.4
-typescript                        3.7.5
-webpack                           4.41.2
-=======
 @angular-devkit/architect         0.1001.0
 @angular-devkit/build-angular     0.1001.0
 @angular-devkit/build-optimizer   0.1001.0
@@ -202,7 +136,6 @@ webpack                           4.41.2
 rxjs                              6.6.2
 typescript                        4.0.2
 webpack                           4.44.1
->>>>>>> main
 ----
 
 == Run the application
@@ -224,11 +157,7 @@ You can make sure your new project's tests pass, run `ng test`:
 ----
 $ ng test
 ...
-<<<<<<< HEAD
-Chrome 80.0.3987 (Mac OS X 10.15.3): Executed 3 of 3 SUCCESS (0.197 secs / 0.137 secs)
-=======
 Chrome 85.0.4183.83 (Mac OS 10.15.6): Executed 3 of 3 SUCCESS (0.156 secs / 0.118 secs)
->>>>>>> main
 ----
 
 == Add a search feature
@@ -275,16 +204,9 @@ export class SearchComponent implements OnInit {
 
   constructor() { }
 
-<<<<<<< HEAD
-  ngOnInit() {
-  }
-
-  search(): void {}
-=======
   ngOnInit(): void { }
 
   search(): void { }
->>>>>>> main
 
 }
 ----
@@ -311,13 +233,8 @@ const routes: Routes = [
 Run `ng serve` again you will see a compilation error.
 
 ----
-<<<<<<< HEAD
-ERROR in src/app/search/search.component.html:3:37 - error TS8002:
-Can't bind to 'ngModel' since it isn't a known property of 'input'.
-=======
 ERROR in src/app/search/search.component.html:3:37 - error NG8002:
  Can't bind to 'ngModel' since it isn't a known property of 'input'.
->>>>>>> main
 ----
 
 To solve this, open `src/app/app.module.ts` and add `FormsModule` as an import in `@NgModule`:
@@ -422,14 +339,9 @@ mkdir -p src/assets/data
 ----
 
 Modify `src/app/shared/search/search.service.ts` and provide `HttpClient` as a dependency in its constructor.
-<<<<<<< HEAD
-In this same file, create a `getAll()` method to gather all the people. Also, define the `Address` and `Person` classes that JSON will be marshalled to.
-
-=======
 
 In this same file, create a `getAll()` method to gather all the people. Also, define the `Address` and `Person` classes that JSON will be marshalled to.
 
->>>>>>> main
 [source,typescript]
 .src/app/shared/search/search.service.ts
 ----
@@ -744,11 +656,7 @@ export class EditComponent implements OnInit, OnDestroy {
     });
   }
 
-<<<<<<< HEAD
-  ngOnDestroy() {
-=======
   ngOnDestroy(): void {
->>>>>>> main
     if (this.sub) {
       this.sub.unsubscribe();
     }
@@ -858,11 +766,7 @@ sub: Subscription;
 
 constructor(private searchService: SearchService, private route: ActivatedRoute) { }
 
-<<<<<<< HEAD
-  ngOnInit() {
-=======
   ngOnInit(): void {
->>>>>>> main
     this.sub = this.route.params.subscribe(params => {
       if (params.term) {
         this.query = decodeURIComponent(params.term);
@@ -906,11 +810,7 @@ To make name required, modify `edit.component.html` to add a `required` attribut
 </div>
 ----
 
-<<<<<<< HEAD
-You'll also need to wrap everything in a `<form>` element. Add `<form>` after the `<h3>` tag and close it before the last `</div>`. You'll also need to add an `(ngSubmit)` handler to the form, give it a name of `editForm`, change the save button to be a regular submit button that's disabled when the form is invalid.
-=======
 You'll also need to wrap everything in a `<form>` element. Add `<form>` after the `<h3>` tag and close it before the last `</div>`. You'll also need to add an `(ngSubmit)` handler to the form, give it a name of `editForm`, and change the save button to be a regular submit button that's disabled when the form is invalid.
->>>>>>> main
 
 [source,html]
 .src/app/edit/edit.component.html
@@ -984,11 +884,7 @@ TIP: You can use `x` and `f` prefixes Jasmine's `describe` and `it` functions to
 
 === Fix the `AppComponent` test
 
-<<<<<<< HEAD
-If you changed the `app.component.html` template like I did, you'll need to modify `app.component.spec.ts` to account for the change in HTML. Change its last test to look for an `<h1>` element.
-=======
 If you changed the `app.component.html` template like I did, you'll need to modify `app.component.spec.ts` to account for the change in HTML. Change its last test to look for an `<h1>` element and the welcome message inside it.
->>>>>>> main
 
 [source,ts]
 .src/app/app/app.component.spec.ts
@@ -997,11 +893,7 @@ it('should render title', () => {
   const fixture = TestBed.createComponent(AppComponent);
   fixture.detectChanges();
   const compiled = fixture.nativeElement;
-<<<<<<< HEAD
-  expect(compiled.querySelector('h1').textContent).toContain('ng-demo app is running!');
-=======
   expect(compiled.querySelector('h1').textContent).toContain('Welcome to ng-demo!');
->>>>>>> main
 });
 ----
 
@@ -1120,15 +1012,9 @@ it('should fetch by id', () => {
 === Unit test the SearchComponent
 
 To unit test the `SearchComponent`, you can mock the methods in `SearchService` with http://angular-tips.com/blog/2014/03/introduction-to-unit-test-spies/[spies]. These allow you to _spy_ on functions to check if they were called.
-<<<<<<< HEAD
 
 Create `src/app/shared/search/mocks/routes.ts` to mock Angular's `Router` and `ActivatedRoute`.
 
-=======
-
-Create `src/app/shared/search/mocks/routes.ts` to mock Angular's `Router` and `ActivatedRoute`.
-
->>>>>>> main
 [source,typescript]
 .src/app/shared/search/mocks/routes.ts
 ----
@@ -1149,11 +1035,7 @@ export class MockRouter {
 }
 ----
 
-<<<<<<< HEAD
-With this mock in place, you can `TestBed.configureTestingModule()` to setup `SearchComponent` to use it as a provider. In the second `beforeEach()`, you can see that the `search()` method is spied on and its results are mocked. The response isn't important in this case because you're just unit testing the `EditComponent`.
-=======
 With this mock in place, you can `TestBed.configureTestingModule()` to setup `SearchComponent` to use it as a provider. In the second `beforeEach()`, you can see that the `search()` method is spied on and its results are mocked. The response isn't important in this case because you're just unit testing the `SearchComponent`.
->>>>>>> main
 
 [source,typescript]
 .src/app/search/search.component.spec.ts
@@ -1164,13 +1046,9 @@ import { SearchService } from '../shared';
 import { ActivatedRoute } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { FormsModule } from '@angular/forms';
-<<<<<<< HEAD
-import { MockActivatedRoute, MockRouter } from '../shared/search/mocks/routes';
-=======
 import { MockActivatedRoute } from '../shared/search/mocks/routes';
 import { of } from 'rxjs';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
->>>>>>> main
 
 describe('SearchComponent', () => {
   let component: SearchComponent;
@@ -1178,13 +1056,8 @@ describe('SearchComponent', () => {
   let mockSearchService: SearchService;
   let mockActivatedRoute: MockActivatedRoute;
 
-<<<<<<< HEAD
-  beforeEach(async(() => {
-    mockActivatedRoute = new MockActivatedRoute({'term': 'nikola'});
-=======
   beforeEach((() => {
     mockActivatedRoute = new MockActivatedRoute({term: 'nikola'});
->>>>>>> main
 
     TestBed.configureTestingModule({
       declarations: [SearchComponent],
@@ -1238,11 +1111,7 @@ Update the test for `EditComponent`, verifying fetching a single record works. N
 import { EditComponent } from './edit.component';
 import { TestBed } from '@angular/core/testing';
 import { Address, Person, SearchService } from '../shared';
-<<<<<<< HEAD
-import { MockRouter, MockActivatedRoute } from '../shared/search/mocks/routes';
-=======
 import { MockActivatedRoute, MockRouter } from '../shared/search/mocks/routes';
->>>>>>> main
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { of } from 'rxjs';
@@ -1293,14 +1162,9 @@ describe('EditComponent', () => {
     expect(compiled.querySelector('h3').innerHTML).toBe('Gary Harris');
   });
 });
-
 ----
 
-<<<<<<< HEAD
-You should see "Executed 11 of 11 [green]#SUCCESS# (0.192 secs / 0.141 secs)" in the shell window that's running `ng test`. If you don't, try cancelling the command and restarting.
-=======
 You should see "Executed 11 of 11 [green]#SUCCESS# (0.118 secs / 0.096 secs)" in the shell window that's running `ng test`. If you don't, try cancelling the command and restarting.
->>>>>>> main
 
 === Integration test the search UI
 
@@ -1324,52 +1188,16 @@ This happens because you changed the HTML structure of `app.component.html`. To 
 [source,ts]
 .e2e/src/app.po.ts
 ----
-<<<<<<< HEAD
-getTitleText() {
-=======
 getTitleText(): Promise<string> {
->>>>>>> main
   return element(by.css('app-root h1')).getText() as Promise<string>;
 }
 ----
 
-<<<<<<< HEAD
-Now you should be able to run `ng e2e` and have everything pass.
-=======
 You'll also need to change the test in `app.e2e-spec.ts` to use the new welcome message.
->>>>>>> main
 
 [source,ts]
 .e2e/src/app.e2e-spec.ts
 ----
-<<<<<<< HEAD
-$ ng e2e
-[16:18:12] I/config_source - curl -o/Users/mraible/ng-demo/node_modules/protractor/node_modules/webdriver-manager/selenium/chrome-response.xml https://chromedriver.storage.googleapis.com/
-[16:18:13] I/update - chromedriver: file exists /Users/mraible/ng-demo/node_modules/protractor/node_modules/webdriver-manager/selenium/chromedriver_80.0.3987.106.zip
-[16:18:13] I/update - chromedriver: unzipping chromedriver_80.0.3987.106.zip
-[16:18:13] I/update - chromedriver: setting permissions to 0755 for /Users/mraible/ng-demo/node_modules/protractor/node_modules/webdriver-manager/selenium/chromedriver_80.0.3987.106
-[16:18:13] I/update - chromedriver: chromedriver_80.0.3987.106 up to date
-
-chunk {main} main.js, main.js.map (main) 43.5 kB [initial] [rendered]
-chunk {polyfills} polyfills.js, polyfills.js.map (polyfills) 140 kB [initial] [rendered]
-chunk {runtime} runtime.js, runtime.js.map (runtime) 6.15 kB [entry] [rendered]
-chunk {styles} styles.js, styles.js.map (styles) 9.7 kB [initial] [rendered]
-chunk {vendor} vendor.js, vendor.js.map (vendor) 3.38 MB [initial] [rendered]
-Date: 2020-02-18T00:18:22.499Z - Hash: 3fac0c4de320c4fe0b2c - Time: 5627ms
-** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
-ℹ ｢wdm｣: Compiled successfully.
-[16:18:23] I/launcher - Running 1 instances of WebDriver
-[16:18:23] I/direct - Using ChromeDriver directly...
-Jasmine started
-
-  workspace-project App
-    ✓ should display welcome message
-
-Executed 1 of 1 spec SUCCESS in 0.586 sec.
-[16:18:27] I/launcher - 0 instance(s) of WebDriver still running
-[16:18:27] I/launcher - chrome #01 passed
-Execution time: 10 s.
-=======
 it('should display welcome message', () => {
   page.navigateTo();
   expect(page.getTitleText()).toEqual('Welcome to ng-demo!');
@@ -1404,7 +1232,6 @@ Executed 1 of 1 spec SUCCESS in 0.315 sec.
 [23:47:38] I/launcher - 0 instance(s) of WebDriver still running
 [23:47:38] I/launcher - chrome #01 passed
 Execution time: 11 s.
->>>>>>> main
 ----
 
 === Testing the search feature
@@ -1484,22 +1311,6 @@ image::src/assets/images/protractor-success.png[Protractor success, 800, scaledw
 If you made it this far and have all your specs passing - congratulations! You're well on your way to writing quality code with Angular and verifying it works.
 
 You can see the test coverage of your project by running `ng test --codeCoverage=true`.
-<<<<<<< HEAD
-
-You'll see a print out of code coverage in your terminal window.
-
-----
-=============================== Coverage summary ===============================
-Statements   : 80.82% ( 59/73 )
-Branches     : 71.43% ( 30/42 )
-Functions    : 83.33% ( 25/30 )
-Lines        : 79.1% ( 53/67 )
-================================================================================
-----
-
-You can also open `coverage/index.html` in your browser.
-
-=======
 
 You'll see a print out of code coverage in your terminal window.
 
@@ -1514,7 +1325,6 @@ Lines        : 78.79% ( 52/66 )
 
 You can also open `coverage/ng-demo/index.html` in your browser.
 
->>>>>>> main
 You might notice that the `EditComponent` could use some additional coverage. If you feel the need to improve this coverage, please create a pull request!
 
 [[test-coverage]]
@@ -1523,9 +1333,6 @@ image::src/assets/images/test-coverage.png[Test coverage, 800, scaledwidth="100%
 
 == Continuous Integration
 
-<<<<<<< HEAD
-At the time of this writing, Angular CLI did not have any continuous integration support. This section shows you how to setup continuous integration with https://travis-ci.org/[Travis CI] and https://jenkins.io/[Jenkins].
-=======
 At the time of this writing, Angular CLI did not have any continuous integration support. This section shows you how to setup continuous integration with https://github.com/features/actions[GitHub Actions], https://travis-ci.org/[Travis CI] and https://jenkins.io/[Jenkins].
 
 CAUTION: In the commands below, I use `master` as the branch name. I use this because it's the default. I recommend you https://www.hanselman.com/blog/EasilyRenameYourGitDefaultBranchFromMasterToMain.aspx[change your default branch name to `main`].
@@ -1569,7 +1376,6 @@ jobs:
 Check it in on a branch, create a pull request for that branch, and you should see your tests running.
 
 https://github.com/mraible/ng-demo/pull/76/checks?check_run_id=1107490951[Here is a build] showing all unit and integration tests passing.
->>>>>>> main
 
 === Travis CI
 
@@ -1588,11 +1394,7 @@ services:
   - xvfb
 language: node_js
 node_js:
-<<<<<<< HEAD
-  - "12.13.0"
-=======
   - "14.x"
->>>>>>> main
 addons:
   apt:
     packages:
@@ -1604,11 +1406,6 @@ cache:
 branches:
   only:
   - master
-<<<<<<< HEAD
-before_install:
-  - npm install -g @angular/cli
-=======
->>>>>>> main
 install:
   - npm ci
 script:
@@ -1621,11 +1418,7 @@ notifications:
     on_start: false
 ----
 
-<<<<<<< HEAD
-https://travis-ci.org/mraible/ng-demo/builds/610233616[Here] is a build showing all unit and integration tests passing.
-=======
 https://travis-ci.org/github/mraible/ng-demo/builds/726701970[Here is a build] showing all unit and integration tests passing.
->>>>>>> main
 
 === Jenkins
 
@@ -1635,11 +1428,7 @@ If you've checked your project into source control, you can use Jenkins to autom
 
 ----
 node {
-<<<<<<< HEAD
-    def nodeHome = tool name: 'node-12.13.0', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
-=======
     def nodeHome = tool name: 'node-14.x', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
->>>>>>> main
     env.PATH = "${nodeHome}/bin:${env.PATH}"
 
     stage('check tools') {
@@ -1666,16 +1455,11 @@ node {
 ----
 
 [start=2]
-<<<<<<< HEAD
-. Download https://jenkins.io/download/[Jenkins] and install it on your local hard drive. Start it using `java -jar jenkins.war`.
-. Login to Jenkins and create a new project with an SCM Pipeline. Point it at your project's repository. Run a build.
-=======
 . Install https://jenkins.io/download/[Jenkins] on your hard drive and start it.
 . Login to Jenkins at `http://localhost:8080` and install the Node.js plugin.
 . Go to **Manage Jenkins** > **Global Tool Configuration** > **NodeJS**. Install and configure the name of your Node.js installation to match your build script.
 . Create a new project with **Pipeline** > **Pipeline script from SCM** (near the bottom). Point it at your project's repository.
 . Click **Build Now**.
->>>>>>> main
 
 == Deployment
 
@@ -1689,8 +1473,6 @@ Login to your account.
 
 [source,bash]
 ----
-<<<<<<< HEAD
-=======
 cf login -a api.run.pivotal.io
 ----
 
@@ -1698,7 +1480,6 @@ Then run the following commands to build and deploy your application.
 
 [source,bash]
 ----
->>>>>>> main
 ng build --prod
 cd dist && touch Staticfile
 # enable pushstate so no 404s on refresh
@@ -1759,11 +1540,6 @@ Add `--prod` to the `build` script since the static buildback uses this command.
 },
 ----
 
-<<<<<<< HEAD
-. Add a `heroku-postbuild` script to `package.json`:
-
-  "heroku-postbuild": "ng build --prod && npm install -g http-server-spa"
-=======
 Commit your changes to Git, add the Node.js + static buildpack, and redeploy your Angular app.
 
 [source,shell]
@@ -1776,7 +1552,6 @@ git push heroku master
 ----
 
 View the application in your browser with `heroku open`. Try your app's URL on <https://securityheaders.com> to be pleasantly suprised.
->>>>>>> main
 
 TIP: You can watch your app's logs using `heroku logs --tail`.
 
@@ -1787,7 +1562,6 @@ A completed project with this code in it is available on GitHub at https://githu
 == Summary
 
 I hope you've enjoyed this in-depth tutorial on how to get started with Angular and Angular CLI. Angular CLI takes much of the pain out of setting up an Angular project and using Typescript. I expect great things from Angular CLI, mostly because the Angular setup process can be tedious and CLI greatly simplifies things.
-<<<<<<< HEAD
 
 == Bonus: Okta
 
@@ -2020,17 +1794,4 @@ The code in this branch can be downloaded using the following command:
 git clone -b okta https://github.com/mraible/ng-demo.git
 ----
 
-https://github.com/mraible/ng-demo/compare/master\...okta[Click here to see the difference] between this branch and the main branch.
-=======
-
-== Bonus: Angular Material, Bootstrap 4, Okta, and Electron
-
-If you'd like to see how to integrate https://material.angular.io/[Angular Material], https://getbootstrap.com[Bootstrap 4], http://developer.okta.com[authentication with Okta], or https://www.electronjs.org/[Electron] this section is for you!
-
-I've created branches to show how to integrate each of these libraries. Click on the links below to see each branch's documentation.
-
-* https://github.com/mraible/ng-demo/tree/angular-material#bonus-angular-material[Angular Material]
-* https://github.com/mraible/ng-demo/tree/bootstrap4#bonus-bootstrap[Bootstrap 4]
-* https://github.com/mraible/ng-demo/tree/okta#bonus-okta[Authentication with Okta]
-* https://github.com/mraible/ng-demo/tree/electron#bonus-electron[Electron]
->>>>>>> main
+https://github.com/mraible/ng-demo/compare/main\...okta[Click here to see the difference] between this branch and the main branch.
